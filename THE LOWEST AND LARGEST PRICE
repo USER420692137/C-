@@ -1,0 +1,144 @@
+var cena1 = 0;
+var cena2 = 0;
+var cena3 = 0;
+var cena4 = 0;
+var cena5 = 0;
+var cena6 = 0;
+var cena7 = 0;
+int pomoc = 0;
+
+
+
+for (int pomoc2 = 0; pomoc2 < 8; pomoc2++ ){
+    pomoc = pomoc + 1;
+    Console.Clear();
+
+    Console.Clear();
+    Console.WriteLine("========================================");
+    Console.WriteLine("            KIEDY INWESTOWAĆ?           ");
+    Console.WriteLine("========================================");
+    Console.WriteLine("wpisz cene akcji dnia: " + pomoc);
+    Console.WriteLine("by wybarać dzień wpisz odpowiedni nr");
+    Console.WriteLine("========================================");
+    Console.WriteLine("1. cena akcji dnia 1: " + cena1);
+    Console.WriteLine("2. cena akcji dnia 2: " + cena2);
+    Console.WriteLine("3. cena akcji dnia 3: " + cena3);
+    Console.WriteLine("4. cena akcji dnia 4: " + cena4);
+    Console.WriteLine("5. cena akcji dnia 5: " + cena5);
+    Console.WriteLine("6. cena akcji dnia 6: " + cena6);
+    Console.WriteLine("7. cena akcji dnia 7: " + cena7);
+    Console.WriteLine("========================================");
+    Console.WriteLine("by potwierdzić kliknij enter");
+    Console.WriteLine("========================================");
+
+    ConsoleKeyInfo klawisz = Console.ReadKey();
+    switch (klawisz.Key) 
+    {
+        case ConsoleKey.D1:
+            cena1 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D2:
+            cena2 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D3:
+            cena3 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D4:
+            cena4 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D5:
+            cena5 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D6:
+            cena6 = Convert.ToInt32(Console.ReadLine()); break;
+        case ConsoleKey.D7:
+            cena7 = Convert.ToInt32(Console.ReadLine()); break;
+            
+    }
+
+
+}
+
+Console.Clear();
+int jeden = Math.Max(cena1, cena2);
+int dwa = Math.Max(cena3, cena4);
+int trzy = Math.Max(cena5, cena6);
+
+int trztery = Math.Max(jeden, cena7);
+int pienc = Math.Max(dwa, trzy);
+
+int koniec = Math.Max(trztery, pienc);
+
+int jeden2 = Math.Min(cena1, cena2);
+int dwa2 = Math.Min(cena3, cena4);
+int trzy2 = Math.Min(cena5, cena6);
+
+int trztery2 = Math.Min(jeden, cena7);
+int pienc2 = Math.Min(dwa, trzy);
+
+int koniec2 = Math.Min(trztery, pienc);
+
+
+var najmniejszy = "a";
+var najwiekszy = "b";
+
+if (koniec2 == cena1)
+{
+    najmniejszy = "poniedziałek";
+}
+else if (koniec2 == cena2)
+{
+    najmniejszy = "wtorek";
+}
+else if (koniec2 == cena3)
+{
+    najmniejszy = "środa";
+}
+else if (koniec2 == cena4)
+{
+    najmniejszy = "czwartek";
+}
+else if (koniec2 == cena5)
+{
+    najmniejszy = "piątek";
+}
+else if (koniec2 == cena6)
+{
+    najmniejszy = "sobota";
+}
+else if (koniec2 == cena7)
+{
+    najmniejszy = "niedziela";
+}
+
+
+if (koniec == cena1)
+{
+    najwiekszy = "poniedziałek";
+}
+else if (koniec == cena2)
+{
+    najwiekszy = "wtorek";
+}
+else if (koniec == cena3)
+{
+    najwiekszy = "środa";
+}
+else if (koniec == cena4)
+{
+    najwiekszy = "czwartek";
+}
+else if (koniec == cena5)
+{
+    najwiekszy = "piątek";
+}
+else if (koniec == cena6)
+{
+    najwiekszy = "sobota";
+}
+else if (koniec == cena7)
+{
+    najwiekszy = "niedziela";
+}
+
+Console.Clear();
+Console.WriteLine("========================================");
+Console.WriteLine("NAJLEPIEJ ZAINWESTOWAĆ W " + najwiekszy);
+Console.WriteLine("========================================");
+Console.WriteLine("NAJLEPIEJ SKPRZEDAĆ W " + najmniejszy);
+Console.WriteLine("========================================");
